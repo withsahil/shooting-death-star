@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>death star</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- image -->
+      <div id="ship" v-bind:class="{burst:ended}"></div>
+
+
+      <!-- health -->
+      <div id="ship-health">
+        <div v-bind:style="{width:health +'%'}"></div>
+      </div>
+
+      <!-- game control -->
+      <div id="controls">
+        <button v-on:click="fire" v-show="!ended">Fire</button>
+        <button v-on:click="restart">Restart</button>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
